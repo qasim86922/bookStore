@@ -1,0 +1,101 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(233, 229, 229);
+}
+/* Image Card */
+.card {
+  border: solid 1.5px black;
+}
+.product-img {
+  background-image: url('/bg-img.jpg');
+  background-size: contain;
+
+  height: 30vh;
+}
+.product-img img {
+  max-height: 80%;
+  max-width: 80%;
+}
+.card {
+  transition: all 0.3s;
+}
+.card:hover {
+  -webkit-box-shadow: 6px 4px 5px 0px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 6px 4px 5px 0px rgba(0, 0, 0, 0.35);
+  box-shadow: 6px 4px 5px 0px rgba(0, 0, 0, 0.35);
+  transform: translateY(-2px) scale(1.01);
+}
+.card-header {
+  background-color: #212529;
+  color: white;
+  font-weight: 500;
+  font-size: 22px;
+}
+.card-body {
+  background: #efefbb; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #d4d3dd,
+    #efefbb
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #d4d3dd,
+    #efefbb
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-size: cover;
+  height: 80%;
+}
+
+.title {
+  font-size: 40px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 6px 0;
+  font-weight: 700;
+  display: block;
+  background-image: linear-gradient(to right, #6b95c5, #007bff);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+  transition: all 0.2s;
+}
+.title:hover {
+  transform: skewY(2deg) scale(1.1);
+  text-shadow: 0.5rem 1rem 2rem rgba(#000, 0.2);
+}
+
+.nav-link {
+  transition: all 0.2s;
+}
+.nav-link:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive */
+html {
+  /* 1rem= 18px*/
+  font-size: 100%;
+}
+/* bigphone */
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 66%;
+  }
+  .title {
+    font-size: 25px;
+  }
+  .card-container {
+    display: block;
+  }
+  .card {
+    width: 60vw;
+    left: 17.5vw;
+  }
+}
